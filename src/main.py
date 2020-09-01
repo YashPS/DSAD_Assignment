@@ -84,10 +84,10 @@ def write_output(path, selected_list, total_damage):
 
     """
     with open(path, 'w') as outp:
-        outp.write('Total Damage: {}\n'.format(round(total_damage,2)))
+        outp.write('Total Damage: {}\n'.format(round(total_damage, 2)))
         outp.write('Ammunition Packs Selection Ratio:\n')
         for item in selected_list:
-            outp.write('{} > {}\n'.format(item[0], round(item[1],2)))
+            outp.write('{} > {}\n'.format(item[0], round(item[1], 2)))
 
 
 def main():
@@ -96,7 +96,7 @@ def main():
     """
     weapons, max_weight, data = read_inputs('src\\inputPS3.txt')
     selected_list, total_damage = select_ammunition(weapons, max_weight, data)
-    write_output('src\\outputPS3.txt',selected_list, total_damage)
+    write_output('src\\outputPS3.txt', selected_list, total_damage)
 
 
 if __name__ == '__main__':
